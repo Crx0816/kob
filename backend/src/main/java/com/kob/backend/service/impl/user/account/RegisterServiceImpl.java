@@ -60,7 +60,7 @@ public class RegisterServiceImpl implements RegisterService {
         String photo = "https://cdn.acwing.com/media/user/profile/photo/81408_lg_135e36a586.jpg";
         User user = new User(null, username, encodedPassword, photo);
         userMapper.insert(user);
-        map.put("success_message", "success");
+        map.put("error_message", "success");
         return map;
 
     }
