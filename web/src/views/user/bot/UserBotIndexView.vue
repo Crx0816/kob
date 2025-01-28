@@ -78,7 +78,7 @@
                             <tbody>
                                 <tr v-for="bot in bots" :key="bot.id">
                                     <td>{{ bot.title }}</td>
-                                    <td>{{ bot.createTime }}</td>
+                                    <td>{{ bot.createtime }}</td>
                                     <td>
                                         <button type="button" class="btn btn-success" style="margin-right: 10px;"
                                             data-bs-toggle="modal"
@@ -190,6 +190,7 @@ export default {
                     bots.value = resp;
                 }
             });
+
         }
 
         refresh_bots();
