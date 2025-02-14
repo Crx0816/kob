@@ -70,7 +70,7 @@ public class RegisterServiceImpl implements RegisterService {
         }
 
         String encodedPassword = passwordEncoder.encode(password);
-//        String photo = "https://cdn.acwing.com/media/user/profile/photo/1_lg_844c66b332.jpg";
+
         String[] photos = {
                 "https://cdn.acwing.com/media/user/profile/photo/81408_lg_135e36a586.jpg",
                 "https://cdn.acwing.com/media/article/image/2024/03/29/126318_b71a3d44ed-luffy.png",
@@ -80,6 +80,7 @@ public class RegisterServiceImpl implements RegisterService {
         };
         int idx = random.nextInt(5);
         String photo = photos[idx];
+        System.out.println("photo: " + photo);
         User user = new User(null, username, encodedPassword, photo, 1500);
         userMapper.insert(user);
 
