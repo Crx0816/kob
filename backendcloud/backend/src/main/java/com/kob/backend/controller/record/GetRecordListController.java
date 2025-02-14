@@ -13,7 +13,7 @@ public class GetRecordListController {
     @Autowired
     private GetRecordListService getRecordListService;
 
-    @GetMapping("/record/getlist/")
+    @GetMapping("/api/record/getlist/")
     public Object getRecordList(@RequestParam Map<String, String> params) {
         Integer page = Integer.parseInt(params.get("page"));
         return getRecordListService.getList(page);

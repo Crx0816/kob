@@ -7,6 +7,7 @@ import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
+import InfoView from "@/views/info/InfoView.vue";
 import store from '../store/index'
 
 const routes = [
@@ -78,6 +79,15 @@ const routes = [
     path: "/404/",
     name: "404",
     component: NotFound,
+    meta: {
+      requestAuth: false,
+    }
+    
+  },
+  {
+    path: "/info/",
+    name: "info_index",
+    component: InfoView,
     meta: {
       requestAuth: false,
     }
